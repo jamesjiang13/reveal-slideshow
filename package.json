@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jamesjiang13/reveal-slideshow#readme",
   "dependencies": {
     "css-loader": "^5.0.1",
+    "reveal.js": "^4.1.0",
     "script-loader": "^0.7.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.11.0",
