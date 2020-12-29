@@ -1,0 +1,28 @@
+{
+  "name": "reveal-slideshow",
+  "version": "1.0.0",
+  "description": "A slideshow using Reveal.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesjiang13/reveal-slideshow.git"
+  },
+  "author": "James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesjiang13/reveal-slideshow/issues"
+  },
+  "homepage": "https://github.com/jamesjiang13/reveal-slideshow#readme",
+  "dependencies": {
+    "css-loader": "^5.0.1",
+    "script-loader": "^0.7.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
