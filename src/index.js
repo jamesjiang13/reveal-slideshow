@@ -32,8 +32,9 @@ window.onload = () => {
 
   document.getElementById("exit")
           .addEventListener("click", () => {
-            document.getElementById("reveal")
-                    .classList.add("hide");
+            
+            document.getElementById("reveal").classList.add("hide");
+            document.getElementById("start").classList.remove("hide")
             
             hideExit();
           });

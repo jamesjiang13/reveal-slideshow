@@ -1,3 +1,7 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -9,6 +13,7 @@
   background-color: white;
   color: red;
   border: 2px solid red;
+  font-size: 2em;
   padding: 40px;
   border-radius: 5px;
 }
@@ -34,14 +39,11 @@
 
 .show-exit:hover {
   cursor: pointer;
-  background: white;
+  background: red;
+  color: white;
 }
 
 .hide-exit, .hide {
   display: none;
   background: white;
-}
-
-#body {
-  background-color: none;
 }
