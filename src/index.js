@@ -1,14 +1,5 @@
 import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
-// import styles from './stylesheets/index.modules.css';
-
-// function component() {
-//   const element = document.createElement('div');
-//   element.innerHTML = 'Hello webpack';
-//   return element;
-// }
-
-// document.body.appendChild(component());
 
 window.onload = () => {
   let slideshow = false;
@@ -20,6 +11,7 @@ window.onload = () => {
 
     slideshow = true;
     deck.initialize();
+    showExit();
   }
   
   function showExit() {
@@ -38,11 +30,7 @@ window.onload = () => {
   document.getElementById("start")
           .addEventListener("click", () => startDeck());
 
-  if (slideshow) {
-    showExit();
-  } else {
-    hideExit();
-  }
+  (slideshow ? showExit() : hideExit())
 
 };
 

@@ -1,4 +1,4 @@
-#show-exit {
+.show-exit {
   position: fixed;
   top: 30px;
   right: 30px;
@@ -8,11 +8,11 @@
   background-color: gold;
 }
 
-#show-exit:hover {
+.show-exit:hover {
   cursor: pointer;
   background: white;
 }
 
-#hide-exit {
+.hide-exit {
   display: none;
 }
