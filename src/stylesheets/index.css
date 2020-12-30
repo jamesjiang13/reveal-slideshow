@@ -45,5 +45,5 @@ body {
 
 .hide-exit, .hide {
   display: none;
-  background: white;
+  padding: none;
 }
