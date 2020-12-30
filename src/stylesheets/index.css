@@ -1,0 +1,18 @@
+#show-exit {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  color: red;
+  background-color: gold;
+}
+
+#show-exit:hover {
+  cursor: pointer;
+  background: white;
+}
+
+#hide-exit {
+  display: none;
+}
