@@ -2,17 +2,6 @@ import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 
 window.onload = () => {
-  let slideshow = false;
-
-  function startDeck() {
-    let deck = new Reveal({
-      plugins: [Markdown],
-    });
-
-    slideshow = true;
-    deck.initialize();
-    showExit();
-  }
   
   function showExit() {
     var element = document.getElementById("exit");
@@ -25,12 +14,27 @@ window.onload = () => {
     element.classList = "";
     element.classList.add("hide-exit");
   }
-  
 
   document.getElementById("start")
-          .addEventListener("click", () => startDeck());
+          .addEventListener("click", () => {
 
-  (slideshow ? showExit() : hideExit())
+            document.getElementById("start").classList.add("hide")
+            document.getElementById("reveal")
+                    .classList.remove("hide")
 
+            let deck = new Reveal({
+              plugins: [Markdown],
+            });
+            deck.initialize();
+
+            showExit();
+          });
+
+  document.getElementById("exit")
+          .addEventListener("click", () => {
+            document.getElementById("reveal")
+                    .classList.add("hide");
+            
+            hideExit();
+          });
 };
-

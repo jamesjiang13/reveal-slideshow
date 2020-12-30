@@ -16,16 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   </head>
   
-  <body>
-    <button id="start">
-      Click to start
-    </button>
+  <body id="body">
+    <div class="button-container">
+      <button id="start">
+        Click to start
+      </button>
+    </div>
 
-    <button id="close">
-      Click to close
-    </button>
-
-    <div class="reveal">
+    <div class="reveal" id="reveal">
       <div class="slides">
         <section>Horizontal Slide 1</section>
         <section>
@@ -36,9 +34,10 @@
       </div>
     </div>
 
-    <button id='exit'>X</button>
+    <button id='exit' class="hide-exit">X</button>
 
     <script src="bundle.js"></script>
   </body>
 
 </html>
+
