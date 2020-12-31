@@ -1,5 +1,6 @@
-This is a basic framework to open/close a Reveal.js presentation with a simple button.
+![](reveal-btn-demo.gif)
 
+This is a basic framework to open/close a Reveal.js presentation with a simple button.
 
 To begin: 
 
