@@ -5,21 +5,50 @@
   <head>
     <meta charset="utf-8" />
     <title>Reveal slides</title>
-
+    
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" type="text/css">
-    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/black.css" type="text/css"> 
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/moon.css" type="text/css"> 
+
+    <link rel="stylesheet" href="../src/stylesheets/reset.css" type="text/css"> 
+    <link rel="stylesheet" href="../src/stylesheets/index.css" type="text/css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
   </head>
   
   <body id="body">
-    <div class="button-container" id="start-container">
-      <button id="start-btn">
-        Click to start
-      </button>
+    <div class="start-page-container" id="start-page-container">
+      <section id="intro-container" class="container">
+        <span>
+          "The world is a book, and those who do not travel read only a page."
+        </span>
+        
+        <ul class="">
+          <li><a href="#story-container">Next</a></li>
+        </ul>
+      </section>
+          
+      <section id="story-container" class="container">
+        <span>
+          In 2017, I decided to explore a little. 
+        </span>
+        <ul class="">
+          <li><a href="#start-btn-container">Next</a></li>
+        </ul>
+      </section>
+
+      <section id="start-btn-container" class="container">
+        <span>
+          To see my journey...
+        </span>
+        <button id="start-btn">
+          Begin
+        </button>
+      </section>
     </div>
 
     <div class="reveal" id="reveal">
       <div class="slides">
-        <section>Welcome to the demo</section>
+        <section id="0">Welcome to the demo</section>
         <section>You can click the upper X at any time to exit</section>
         <section>Lorum Ipsum1</section>
         <section>Lorum Ipsum2</section>
@@ -28,7 +57,11 @@
       </div>
     </div>
 
-    <button id='exit' class="hide-exit">X</button>
+    <div id="slide-nav" class="hide-nav">
+      <button id="first-slide">Map</button>
+      <button id="exit">X</button>
+    </div>
+
 
     <script src="bundle.js"></script>
   </body>
