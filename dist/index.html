@@ -49,9 +49,21 @@
 
     <div class="reveal" id="reveal">
       <div class="slides">
-        <section id="0">Welcome to the demo</section>
-        <section>You can click the upper X at any time to exit</section>
-        <section>Lorum Ipsum1</section>
+        <section>Welcome to the trip report!</section>
+        <section>
+          <p>
+            You can click "X" at any time to exit
+          </p>
+          <p class="fragment fade-up">
+            You can click "Map" to view where I've been
+          </p>
+          <p class="fragment fade-up">
+            Or just keep going to follow the trip in chronological order
+          </p>
+        </section>
+        <section id="map">
+          <h3>This is the map</h3>
+        </section>
         <section>Lorum Ipsum2</section>
         <section>Lorum Ipsum3</section>
         <section>End</section>
@@ -59,10 +71,9 @@
     </div>
 
     <div id="slide-nav" class="hide-nav">
-      <button id="first-slide">Map</button>
+      <button id="map-slide">Map</button>
       <button id="exit">X</button>
     </div>
-
 
     <script src="bundle.js"></script>
   </body>
