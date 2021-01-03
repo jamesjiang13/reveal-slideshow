@@ -1,49 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
 }
 
-.button-container {
+.container {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.start-page-container span {
+  font-size: 3em;
+  text-align: center;
+  padding: 0 2em 2em 2em;
+}
+
+.btn-next, #start-btn {
+  border: 1px solid #0b2b36;
+  color: #0b2b36;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-next:hover, #start-btn:hover {
+  background-color: #0b2b36;
+  color: white;
+}
+
+.start-page-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px 0;
 }
 
-.button-container > button {
-  background-color: white;
-  color: red;
-  border: 2px solid red;
-  font-size: 2em;
-  padding: 40px;
-  border-radius: 5px;
-}
-
-.button-container > button:hover {
-  background-color: red;
-  color: white;
-  border: 2px solid red;
-  padding: 40px;
-  border-radius: 5px;
-}
-
-.show-exit {
+.show-nav {
   position: fixed;
+  display: flex;
+  justify-content: space-evenly;
   top: 30px;
   right: 30px;
-  border: 2px solid red;
-  border-radius: 5px;
-  padding: 10px;
-  color: red;
-  background-color: white;
 }
 
-.show-exit:hover {
-  cursor: pointer;
-  background: red;
-  color: white;
-}
-
-.hide-exit, .hide {
+.hide-nav, .hide {
   display: none;
   padding: none;
 }
