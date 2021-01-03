@@ -6,9 +6,9 @@ import './stylesheets/index.css';
 window.onload = () => {
   
   function showNav() {
-    let exitBtn = document.getElementById("slide-nav");
-    exitBtn.classList = "";
-    exitBtn.classList.add("show-nav");
+    let navContainer = document.getElementById("slide-nav");
+    navContainer.classList = "";
+    navContainer.classList.add("show-nav");
   }
 
   function hideNav() {

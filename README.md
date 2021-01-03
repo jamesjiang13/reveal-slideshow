@@ -10,8 +10,5 @@ To begin:
 2. move into the folder and install dependencies
 `cd reveal-slideshow && npm install`
 
-3. build webpack
+3. build webpack and launch page
 `npm run build`
-
-4. open index.html in your browser
-`npm run open`
