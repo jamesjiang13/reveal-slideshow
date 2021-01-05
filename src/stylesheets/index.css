@@ -24,14 +24,15 @@ body {
 .btn-next, #start-btn {
   border: 1px solid #0b2b36;
   color: #0b2b36;
-  font-size: 1.5em;
-  padding: 5px 10px;
+  font-size: 2em;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
 .btn-next:hover, #start-btn:hover {
   background-color: #0b2b36;
   color: white;
+  cursor: pointer;
 }
 
 .start-page-container {
@@ -45,9 +46,26 @@ body {
 .show-nav {
   position: fixed;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 110px;
   top: 30px;
   right: 30px;
+}
+
+.show-nav > button {
+  padding: 4px 8px;
+  background-color: #0b2b36;
+  border: 1px solid #93a1a2;
+  border-radius: 5px;
+  color: #93a1a2;
+  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.show-nav > button:hover {
+  cursor: pointer;
+  background-color: #93a1a2;
+  color: #0b2b36;
 }
 
 .hide-nav, .hide {

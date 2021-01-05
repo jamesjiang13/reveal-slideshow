@@ -1,5 +1,6 @@
 import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+
 import './stylesheets/reset.css';
 import './stylesheets/index.css';
 
@@ -26,7 +27,11 @@ window.onload = () => {
             let deck = new Reveal({
               plugins: [Markdown],
             });
-            deck.initialize();
+            deck.initialize()
+
+            document.getElementById("map-slide").addEventListener("click", () => {
+              deck.slide(2,0,0)
+            })
 
             showNav();
           });
@@ -40,9 +45,4 @@ window.onload = () => {
             
             hideNav();
           });
-
-  // document.getElementById("first-slide")
-  //         .addEventListener("click", () => {
-            
-  //         })
 };
