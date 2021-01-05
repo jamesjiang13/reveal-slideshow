@@ -44,6 +44,7 @@ window.onload = () => {
             document.getElementById("reveal").classList.add("hide");
             document.getElementById("start-page-container").classList.remove("hide")
             document.getElementById("body").classList.remove("reveal-viewport")
+            window.location.href = "#";
             
             hideNav();
           });
