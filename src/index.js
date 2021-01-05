@@ -2,6 +2,8 @@ import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 
 import './stylesheets/reset.css';
+import './stylesheets/reveal.css';
+import './stylesheets/moon.css';
 import './stylesheets/index.css';
 
 window.onload = () => {
