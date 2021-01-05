@@ -11,4 +11,4 @@ To begin:
 `cd reveal-slideshow && npm install`
 
 3. build webpack and launch page
-`npm run build`
+`npm run start`

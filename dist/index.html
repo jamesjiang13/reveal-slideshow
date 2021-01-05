@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css" type="text/css">
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/moon.css" type="text/css"> 
 
-    <link rel="stylesheet" href="../src/stylesheets/reset.css" type="text/css"> 
-    <link rel="stylesheet" href="../src/stylesheets/index.css" type="text/css"> 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
   </head>
   
   <body id="body">
@@ -49,23 +46,35 @@
 
     <div class="reveal" id="reveal">
       <div class="slides">
-        <section id="0">Welcome to the demo</section>
-        <section>You can click the upper X at any time to exit</section>
-        <section>Lorum Ipsum1</section>
-        <section>Lorum Ipsum2</section>
-        <section>Lorum Ipsum3</section>
+        <section>Welcome to the trip report!</section>
+        <section>
+          <p>
+            You can click "X" at any time to exit
+          </p>
+          <p class="fragment fade-up">
+            You can click "Map" to view where I've been
+          </p>
+          <p class="fragment fade-up">
+            Or just keep going to follow the trip in chronological order
+          </p>
+        </section>
+        <section id="map">
+          <h3>This will be the map</h3>
+        </section>
+        <section>Country 1</section>
+        <section>Country 2</section>
+        <section>Country 3</section>
+        <section>Country 4</section>
         <section>End</section>
       </div>
     </div>
 
     <div id="slide-nav" class="hide-nav">
-      <button id="first-slide">Map</button>
+      <button id="map-slide">Map</button>
       <button id="exit">X</button>
     </div>
-
 
     <script src="bundle.js"></script>
   </body>
 
 </html>
-
