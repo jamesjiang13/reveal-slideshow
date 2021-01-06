@@ -6,17 +6,6 @@ import './stylesheets/reveal.css';
 import './stylesheets/moon.css';
 import './stylesheets/index.css';
 
-Element.prototype.remove = function() {
-  this.parentElement.removeChild(this);
-}
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-  for(var i = this.length - 1; i >= 0; i--) {
-    if(this[i] && this[i].parentElement) {
-      this[i].parentElement.removeChild(this[i]);
-    }
-  }
-}
-
 window.onload = () => {
   
   function showNav() {
@@ -33,6 +22,23 @@ window.onload = () => {
 
   document.getElementById("start-btn")
           .addEventListener("click", () => {
+            let countries = ["Japan", "China", "Vietnam", "Thailand", "Chile"];
+            
+            let mapSlide = document.getElementById("map");
+            let countryContainer = document.createElement("UL");
+            countryContainer.setAttribute("id", "country-list")
+            mapSlide.appendChild(countryContainer);
+
+            countries.forEach((country) => {
+              let linkContainer = document.createElement("LI");
+              let link = document.createElement("A");
+              let text = document.createTextNode(`${country}`)
+              link.appendChild(text);
+              link.setAttribute("href", `#/${country}`);
+              linkContainer.appendChild(link)
+
+              mapSlide.append(linkContainer)
+            })
 
             document.getElementById("start-page-container").classList.add("hide")
             document.getElementById("reveal").classList.remove("hide")
@@ -42,7 +48,7 @@ window.onload = () => {
             });
             deck.initialize()
 
-            document.getElementById("map-slide").addEventListener("click", () => {
+            document.getElementById("map-nav").addEventListener("click", () => {
               deck.slide(2,0,0)
             })
 
@@ -51,8 +57,8 @@ window.onload = () => {
 
   document.getElementById("exit")
           .addEventListener("click", () => {
-            document.querySelectorAll('.reveal').remove();
-            // document.getElementById("reveal").classList.add("hide");
+            document.getElementById("map").innerHTML = "";
+            document.getElementById("reveal").classList.add("hide");
             document.getElementById("start-page-container").classList.remove("hide")
             document.getElementById("body").classList.remove("reveal-viewport")
             document.getElementById("main").classList.remove("reveal-full-page")
