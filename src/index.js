@@ -6,6 +6,17 @@ import './stylesheets/reveal.css';
 import './stylesheets/moon.css';
 import './stylesheets/index.css';
 
+Element.prototype.remove = function() {
+  this.parentElement.removeChild(this);
+}
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+  for(var i = this.length - 1; i >= 0; i--) {
+    if(this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+  }
+}
+
 window.onload = () => {
   
   function showNav() {
@@ -15,7 +26,7 @@ window.onload = () => {
   }
 
   function hideNav() {
-   let exitBtn = document.getElementById("slide-nav");
+    let exitBtn = document.getElementById("slide-nav");
     exitBtn.classList = "";
     exitBtn.classList.add("hide-nav");
   }
@@ -40,10 +51,11 @@ window.onload = () => {
 
   document.getElementById("exit")
           .addEventListener("click", () => {
-
-            document.getElementById("reveal").classList.add("hide");
+            document.querySelectorAll('.reveal').remove();
+            // document.getElementById("reveal").classList.add("hide");
             document.getElementById("start-page-container").classList.remove("hide")
             document.getElementById("body").classList.remove("reveal-viewport")
+            document.getElementById("main").classList.remove("reveal-full-page")
             window.location.href = "#";
             
             hideNav();
