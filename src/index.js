@@ -30,14 +30,15 @@ window.onload = () => {
             mapSlide.appendChild(countryContainer);
 
             countries.forEach((country) => {
-              let linkContainer = document.createElement("LI");
-              let link = document.createElement("A");
-              let text = document.createTextNode(`${country}`)
-              link.appendChild(text);
-              link.setAttribute("href", `#/${country}`);
-              linkContainer.appendChild(link)
+              let link = document.createElement("DIV");
+              link.setAttribute("class", "country-link")
+              link.innerHTML = country;
 
-              mapSlide.append(linkContainer)
+              link.addEventListener("click", (e) => {
+                window.location.href = (`#/${e.target.innerHTML}`)
+              });
+
+              mapSlide.append(link);
             })
 
             document.getElementById("start-page-container").classList.add("hide")

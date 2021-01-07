@@ -72,3 +72,8 @@ body {
   display: none;
   padding: none;
 }
+
+.country-link:hover {
+  color: white;
+  cursor: pointer;
+}
