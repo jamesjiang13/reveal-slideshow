@@ -21,6 +21,21 @@ body {
   padding: 0 2em 2em 2em;
 }
 
+.start-page-container p {
+  font-size: 3em;
+  text-align: center;
+  padding: 0 1em 1em 1em;
+}
+
+.about-me > li {
+  font-size: 1.3em;
+  padding: .4em;
+}
+
+.about-me {
+  padding-bottom: 2em;
+}
+
 .btn-next, #start-btn {
   border: 1px solid #0b2b36;
   color: #0b2b36;
@@ -47,7 +62,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  width: 110px;
+  width: 160px;
   top: 30px;
   right: 30px;
 }
@@ -73,7 +88,7 @@ body {
   padding: none;
 }
 
-.country-link:hover {
+.bias-link:hover {
   color: white;
   cursor: pointer;
 }

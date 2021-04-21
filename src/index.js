@@ -22,23 +22,25 @@ window.onload = () => {
 
   document.getElementById("start-btn")
           .addEventListener("click", () => {
-            let countries = ["Japan", "China", "Vietnam", "Thailand", "Chile"];
+            let biases = ["Confirmation Bias", "Selection Bias", "Survivorship Bias", 
+            "Recency Bias", "Dunning-Kruger Effect", "Sunk Cost Fallacy", "Anchoring Effect",
+            "Halo Effect"];
             
-            let mapSlide = document.getElementById("map");
-            let countryContainer = document.createElement("UL");
-            countryContainer.setAttribute("id", "country-list")
-            mapSlide.appendChild(countryContainer);
+            let homeSlide = document.getElementById("home");
+            let biasContainer = document.createElement("UL");
+            biasContainer.setAttribute("id", "country-list")
+            homeSlide.appendChild(biasContainer);
 
-            countries.forEach((country) => {
+            biases.forEach((bias) => {
               let link = document.createElement("DIV");
-              link.setAttribute("class", "country-link")
-              link.innerHTML = country;
+              link.setAttribute("class", "bias-link")
+              link.innerHTML = bias;
 
               link.addEventListener("click", (e) => {
                 window.location.href = (`#/${e.target.innerHTML}`)
               });
 
-              mapSlide.append(link);
+              homeSlide.append(link);
             })
 
             document.getElementById("start-page-container").classList.add("hide")
@@ -49,8 +51,8 @@ window.onload = () => {
             });
             deck.initialize()
 
-            document.getElementById("map-nav").addEventListener("click", () => {
-              deck.slide(2,0,0)
+            document.getElementById("bias-nav").addEventListener("click", () => {
+              deck.slide(0,0,0)
             })
 
             showNav();
@@ -58,7 +60,7 @@ window.onload = () => {
 
   document.getElementById("exit")
           .addEventListener("click", () => {
-            document.getElementById("map").innerHTML = "";
+            document.getElementById("home").innerHTML = "";
             document.getElementById("reveal").classList.add("hide");
             document.getElementById("start-page-container").classList.remove("hide")
             document.getElementById("body").classList.remove("reveal-viewport")
