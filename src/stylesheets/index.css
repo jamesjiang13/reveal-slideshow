@@ -92,3 +92,8 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.examples li {
+  list-style-type: circle;
+  font-size: .75em;
+}

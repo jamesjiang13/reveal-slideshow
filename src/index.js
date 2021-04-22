@@ -24,7 +24,7 @@ window.onload = () => {
           .addEventListener("click", () => {
             let biases = ["Confirmation Bias", "Selection Bias", "Survivorship Bias", 
             "Recency Bias", "Dunning-Kruger Effect", "Sunk Cost Fallacy", "Anchoring Effect",
-            "Halo Effect"];
+            "Halo Effect", "Cheerleader Effect", "Frequency Illusion (Baader-Meinhof)"];
             
             let homeSlide = document.getElementById("home");
             let biasContainer = document.createElement("UL");
