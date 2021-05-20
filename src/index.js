@@ -22,7 +22,7 @@ window.onload = () => {
 
   document.getElementById("start-btn")
           .addEventListener("click", () => {
-            let biases = ["Confirmation Bias", "Selection Bias", "Survivorship Bias", 
+            let biases = ["Confirmation Bias", "Survivorship Bias", "Selection Bias",
             "Recency Bias", "Dunning-Kruger Effect", "Sunk Cost Fallacy", "Anchoring Effect",
             "Halo Effect", "Frequency Illusion (Baader-Meinhof)"];
             
